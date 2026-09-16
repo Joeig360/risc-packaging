@@ -1,0 +1,26 @@
+export type ImageRatio = "square" | "portrait" | "landscape";
+export type ImageAsset = { src: string; alt: string; ratio?: ImageRatio };
+export type PackagingSystemComponent = { name: string; description: string };
+export type CustomizationGroup = { name: string; options: string[] };
+export type PackagingSystemDetail = {
+  eyebrow: string;
+  heroTitle?: string;
+  heroImage: ImageAsset;
+  heroCopy: string;
+  heroStatement: string;
+  overview: { title: string; copy: string; items: string[] };
+  components: PackagingSystemComponent[];
+  explodedView: { image: ImageAsset; copy: string; sequence: string[] };
+  fitSection: { image: ImageAsset; title: string; copy: string; points: string[] };
+  customizationGroups: CustomizationGroup[];
+  managementItems: string[];
+  relatedSystems: string[];
+  startOptions: string[];
+  seo: { title: string; description: string };
+};
+export type ProductCategory = { id: string; slug: string; name: string; shortDescription: string; application: "peptide" | "skincare" | "professional" | "cross-category"; image?: ImageAsset; featured: boolean; order: number };
+export type ComponentCategoryDetail = { eyebrow: string; title: string; heroImage: ImageAsset; overview: string; formats: string[]; options: string[]; applications: string[]; relatedComponents: string[]; relatedSystems: string[]; seo: { title: string; description: string } };
+export type Product = { id: string; slug: string; name: string; category: string; shortDescription: string; images: ImageAsset[]; materials: string[]; applications: string[]; featured: boolean };
+export type PackagingSystem = { id: string; slug: string; code: `P0${number}`; name: string; category: "peptide" | "skincare" | "professional"; headline: string; shortDescription: string; heroImage?: ImageAsset; components: string[]; customization: string[]; capabilities: string[]; images: ImageAsset[]; detail?: PackagingSystemDetail; featured: boolean };
+export type Project = { id: string; slug: string; title: string; status: "concept" | "published"; challenge: string; solution: string; outcome?: string; beforeImage?: ImageAsset; afterImage?: ImageAsset; featured: boolean };
+export type Capability = { id: string; slug: string; name: string; shortDescription: string; order: number };

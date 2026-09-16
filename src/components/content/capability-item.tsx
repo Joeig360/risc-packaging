@@ -1,0 +1,2 @@
+import type { Capability } from "@/types/content";
+export function CapabilityItem({ capability }: { capability: Capability }) { return <article className="grid gap-3 border-t border-line py-5 md:grid-cols-[4rem_1fr_2fr]"><span className="text-xs text-slate">0{capability.order}</span><h3 className="font-display text-2xl">{capability.name}</h3><p className="text-sm leading-6 text-slate">{capability.shortDescription}</p></article>; }

@@ -1,0 +1,3 @@
+export function StartWithWhatYouHaveSection({ options }: { options: string[] }) {
+  return <section className="bg-graphite py-16 text-[#fcfbf7] md:py-20"><div className="mx-auto max-w-[var(--container-content)] px-[var(--page-gutter)] text-center"><p className="text-xs tracking-[.14em] text-[#d9d7ce]">START WITH WHAT YOU HAVE</p><h2 className="mt-4 font-display text-4xl md:text-5xl">You don&apos;t need a finished packaging specification to begin.</h2><div className="mt-7 flex flex-wrap justify-center gap-x-5 gap-y-3 text-sm text-[#d9d7ce]">{options.map((option)=><span key={option}>{option}</span>)}</div></div></section>;
+}

@@ -1,0 +1,4 @@
+import type { MetadataRoute } from "next";
+import { packagingSystems, productCategories } from "@/content";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://riscpackaging.com";
+export default function sitemap(): MetadataRoute.Sitemap { const staticPaths = ["", "/solutions", "/packaging-systems", "/components", "/capabilities", "/projects", "/about", "/start-a-project", "/solutions/peptides", "/solutions/skincare", "/solutions/pharma"]; return [...staticPaths.map((path) => ({ url: `${baseUrl}${path}`, changeFrequency: "monthly" as const, priority: path === "" ? 1 : 0.7 })), ...packagingSystems.map(({ slug }) => ({ url: `${baseUrl}/packaging-systems/${slug}`, changeFrequency: "monthly" as const, priority: 0.8 })), ...productCategories.map(({ slug }) => ({ url: `${baseUrl}/components/${slug}`, changeFrequency: "monthly" as const, priority: 0.6 }))]; }

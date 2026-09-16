@@ -1,0 +1,30 @@
+export const professionalSolution = {
+  hero: {
+    eyebrow: "PROFESSIONAL PACKAGING",
+    title: "Professional Packaging, Coordinated as a Complete System",
+    copy: "From vials and closures to inserts, cartons and multi-component sets, RISC helps coordinate complete professional packaging projects across specialized suppliers.",
+    statement: "One project. Multiple specialized suppliers. One point of contact.",
+    image: { src: "/images/packaging-systems/p04-exploded-concept-v1.png", alt: "Organized vial, closure, insert and carton packaging components" },
+  },
+  packaging: [
+    { name: "Vial Packaging", copy: "Primary container formats for organized product programs.", href: "/components/vials", image: "/images/packaging-systems/p01-lyophilized-peptide-concept-v1.png" },
+    { name: "Multi-Vial Kits", copy: "Repeated components brought into one considered set.", href: "/packaging-systems/five-vial-treatment-kit", image: "/images/packaging-systems/p03-five-vial-concept-v1.png" },
+    { name: "Closures", copy: "Visible finishing components coordinated with the system.", href: "/components/closures", image: "/images/packaging-systems/p02-exploded-concept-v1.png" },
+    { name: "Custom Inserts", copy: "Organized cavities for component fit and presentation.", href: "/components/inserts", image: "/images/packaging-systems/p04-open-box-concept-v1.png" },
+    { name: "Folding Cartons", copy: "Secondary packaging for structure and identification.", href: "/components/cartons", image: "/images/packaging-systems/p04-open-box-concept-v1.png" },
+    { name: "Presentation Boxes", copy: "Premium multi-component presentation structures.", href: "/components/rigid-boxes", image: "/images/packaging-systems/p04-ten-vial-premium-concept-v1.png" },
+    { name: "Labels & Identification", copy: "Clear, consistent visual communication across the set.", href: "/components/labels-decoration", image: "/images/skincare/skincare-decoration-detail-concept-v1.png" },
+    { name: "Complete Sets", copy: "Components and secondary packaging organized around one project.", href: "/packaging-systems/10-vial-premium-peptide-kit", image: "/images/packaging-systems/p04-ten-vial-premium-concept-v1.png" },
+  ],
+  projectTypes: [
+    { title: "Single-Container Packaging", copy: "Vial + closure + identification + carton" },
+    { title: "Dual-Component Packaging", copy: "Two containers + clear identification + custom insert" },
+    { title: "Multi-Unit Kits", copy: "Multiple containers + organized cavities + secondary packaging" },
+    { title: "Technical Presentation Sets", copy: "Primary components + custom insert + premium box" },
+  ],
+  systemFlow: ["Primary Container", "Closure", "Identification / Decoration", "Insert", "Carton", "Complete Packaging System"],
+  fit: { image: { src: "/images/packaging-systems/p04-open-box-concept-v1.png", alt: "Organized vial positions within a fitted packaging insert and carton" }, points: ["Component organization", "Insert fit", "Closure fit", "Carton fit", "Repeated presentation", "Multi-unit consistency"] },
+  capabilities: [["DEVELOP", "Define packaging structure and component requirements."], ["SOURCE", "Match specialized component and secondary packaging suppliers."], ["COORDINATE", "Manage multiple suppliers across one project."], ["INSPECT", "Check appearance, fit, organization and packaging consistency."], ["CONSOLIDATE", "Bring components together for final review."], ["DELIVER", "Prepare consolidated packaging for shipment."]],
+  improvements: ["Current vial", "Current closure", "Current insert", "Current carton", "Updated system direction"],
+  start: ["Sample", "Existing Packaging", "Drawing", "Photo", "Component List", "Product Requirements", "Idea"],
+} as const;

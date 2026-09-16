@@ -1,0 +1,5 @@
+import type { CustomizationGroup } from "@/types/content";
+
+export function CustomizationSection({ groups }: { groups: CustomizationGroup[] }) {
+  return <section className="py-16 md:py-24"><div className="mx-auto max-w-[var(--container-wide)] px-[var(--page-gutter)]"><div className="max-w-2xl"><p className="text-xs tracking-[.14em] text-slate">CUSTOMIZATION DIRECTION</p><h2 className="mt-4 font-display text-4xl md:text-5xl">Build the System Around Your Product</h2><p className="mt-5 text-slate">A packaging direction can be developed around your preferred presentation, component options and project requirements.</p></div><div className="mt-9 grid gap-x-8 gap-y-7 sm:grid-cols-2 lg:grid-cols-3">{groups.map((group)=><article key={group.name} className="border-t border-line pt-4"><h3 className="font-display text-2xl">{group.name}</h3><ul className="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate">{group.options.map((option)=><li key={option}>{option}</li>)}</ul></article>)}</div></div></section>;
+}
