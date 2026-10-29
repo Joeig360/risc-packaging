@@ -21,7 +21,7 @@ export const packagingSystems: PackagingSystem[] = [
     detail: {
       eyebrow: "PEPTIDE PACKAGING SYSTEM",
       heroImage: { src: "/images/packaging-systems/p01-lyophilized-peptide-concept-v1.png", alt: "Lyophilized peptide packaging system with vial and carton", ratio: "landscape" },
-      heroCopy: "RISC coordinates vial components, closures, decoration, inserts and secondary packaging around your project requirements.",
+      heroCopy: "SOOYAN coordinates vial components, closures, decoration, inserts and secondary packaging around your project requirements.",
       heroStatement: "ONE PROJECT. ONE POINT OF CONTACT.",
       overview: {
         title: "A Complete Packaging System",
@@ -84,7 +84,7 @@ export const packagingSystems: PackagingSystem[] = [
       eyebrow: "PEPTIDE PACKAGING SYSTEM",
       heroTitle: "Dual-Vial Peptide Packaging",
       heroImage: { src: "/images/packaging-systems/p02-dual-vial-concept-v1.png", alt: "Dual-vial peptide packaging system", ratio: "landscape" },
-      heroCopy: "RISC coordinates two primary containers, closures, inserts and secondary packaging as one complete packaging project.",
+      heroCopy: "SOOYAN coordinates two primary containers, closures, inserts and secondary packaging as one complete packaging project.",
       heroStatement: "TWO COMPONENTS. ONE COORDINATED SYSTEM.",
       overview: {
         title: "A Complete Packaging System",
@@ -145,7 +145,7 @@ export const packagingSystems: PackagingSystem[] = [
       eyebrow: "PEPTIDE PACKAGING SYSTEM",
       heroTitle: "5-Vial Peptide Treatment Kit",
       heroImage: { src: "/images/packaging-systems/p03-five-vial-concept-v1.png", alt: "Five-vial peptide treatment kit with fitted insert", ratio: "landscape" },
-      heroCopy: "RISC coordinates multiple vials, custom inserts, identification and secondary packaging as one complete packaging project.",
+      heroCopy: "SOOYAN coordinates multiple vials, custom inserts, identification and secondary packaging as one complete packaging project.",
       heroStatement: "MULTIPLE UNITS. ONE ORGANIZED SYSTEM.",
       overview: {
         title: "A Complete Packaging System",
@@ -208,7 +208,7 @@ export const packagingSystems: PackagingSystem[] = [
       eyebrow: "PEPTIDE PACKAGING SYSTEM",
       heroTitle: "10-Vial Premium Peptide Kit",
       heroImage: { src: "/images/packaging-systems/p04-ten-vial-premium-concept-v1.png", alt: "Premium ten-vial peptide kit in a fitted graphite presentation box", ratio: "landscape" },
-      heroCopy: "RISC coordinates multi-vial packaging, premium inserts, secondary packaging and production as one complete system.",
+      heroCopy: "SOOYAN coordinates multi-vial packaging, premium inserts, secondary packaging and production as one complete system.",
       heroStatement: "HIGH-COUNT ORGANIZATION. PREMIUM PRESENTATION.",
       overview: {
         title: "A Complete Packaging System",
@@ -269,7 +269,7 @@ export const packagingSystems: PackagingSystem[] = [
       eyebrow: "PEPTIDE PACKAGING SYSTEM",
       heroTitle: "Peptide Serum Dropper System",
       heroImage: { src: "/images/packaging-systems/peptide-serum-system-concept-v1.png", alt: "Frosted peptide serum bottle with graphite dropper and premium carton", ratio: "landscape" },
-      heroCopy: "RISC coordinates premium serum bottles, dispensing components, decoration and secondary packaging as one complete project.",
+      heroCopy: "SOOYAN coordinates premium serum bottles, dispensing components, decoration and secondary packaging as one complete project.",
       heroStatement: "PRECISION DISPENSING. PREMIUM PRESENTATION.",
       overview: {
         title: "A Complete Packaging System",
@@ -333,7 +333,7 @@ export const packagingSystems: PackagingSystem[] = [
       eyebrow: "PEPTIDE PACKAGING SYSTEM",
       heroTitle: "Airless Peptide Serum Packaging",
       heroImage: { src: "/images/packaging-systems/p06-airless-hero-concept-v1.png", alt: "Premium frosted airless serum bottle with graphite actuator and warm ivory carton", ratio: "landscape" },
-      heroCopy: "RISC coordinates airless dispensing components, decoration and secondary packaging as one complete packaging project.",
+      heroCopy: "SOOYAN coordinates airless dispensing components, decoration and secondary packaging as one complete packaging project.",
       heroStatement: "CONTROLLED DISPENSING. INTEGRATED PRESENTATION.",
       overview: {
         title: "A Complete Packaging System",
@@ -378,3 +378,16 @@ export const packagingSystems: PackagingSystem[] = [
     featured: false,
   },
 ];
+
+const packagingSystemTaxonomy: Record<string, NonNullable<PackagingSystem["taxonomy"]>> = {
+  "system-p01": { packagingTypes: ["Vial Packaging", "Boxes & Cartons", "Inserts & Trays"], applications: ["Peptides", "Professional / Clinic", "Treatment Kits"], systemFormats: ["Primary Packaging", "Secondary Packaging", "Complete Packaging System", "Custom Insert System"] },
+  "system-p02": { packagingTypes: ["Vial Packaging", "Boxes & Cartons", "Inserts & Trays", "Kits & Sets"], applications: ["Peptides", "Professional / Clinic", "Treatment Kits"], systemFormats: ["Primary Packaging", "Secondary Packaging", "Complete Packaging System", "Multi-Component Kit", "Custom Insert System"] },
+  "system-p03": { packagingTypes: ["Vial Packaging", "Boxes & Cartons", "Inserts & Trays", "Kits & Sets"], applications: ["Peptides", "Professional / Clinic", "Treatment Kits"], systemFormats: ["Primary Packaging", "Secondary Packaging", "Complete Packaging System", "Multi-Component Kit", "Custom Insert System"] },
+  "system-p04": { packagingTypes: ["Vial Packaging", "Boxes & Cartons", "Inserts & Trays", "Kits & Sets"], applications: ["Peptides", "Professional / Clinic", "Treatment Kits"], systemFormats: ["Primary Packaging", "Secondary Packaging", "Complete Packaging System", "Multi-Component Kit", "Custom Insert System"] },
+  "system-p05": { packagingTypes: ["Bottle Packaging", "Dropper Packaging", "Boxes & Cartons", "Inserts & Trays"], applications: ["Peptides", "Skincare", "Serums"], systemFormats: ["Primary Packaging", "Secondary Packaging", "Complete Packaging System", "Custom Insert System"] },
+  "system-p06": { packagingTypes: ["Airless Packaging", "Bottle Packaging", "Boxes & Cartons", "Inserts & Trays"], applications: ["Peptides", "Skincare", "Serums"], systemFormats: ["Primary Packaging", "Secondary Packaging", "Complete Packaging System", "Custom Insert System"] },
+};
+
+packagingSystems.forEach((system) => {
+  system.taxonomy = packagingSystemTaxonomy[system.id];
+});

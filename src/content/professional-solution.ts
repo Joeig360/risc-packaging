@@ -2,7 +2,7 @@ export const professionalSolution = {
   hero: {
     eyebrow: "PROFESSIONAL PACKAGING",
     title: "Professional Packaging, Coordinated as a Complete System",
-    copy: "From vials and closures to inserts, cartons and multi-component sets, RISC helps coordinate complete professional packaging projects across specialized suppliers.",
+    copy: "From vials and closures to inserts, cartons and multi-component sets, SOOYAN helps coordinate complete professional packaging projects across specialized suppliers.",
     statement: "One project. Multiple specialized suppliers. One point of contact.",
     image: { src: "/images/packaging-systems/p04-exploded-concept-v1.png", alt: "Organized vial, closure, insert and carton packaging components" },
   },

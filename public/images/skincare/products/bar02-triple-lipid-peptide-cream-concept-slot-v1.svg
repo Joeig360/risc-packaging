@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Triple Lipid Peptide Cream concept visual</title>
+  <desc id="desc">Warm ivory premium cream jar concept with a rich cream surface.</desc>
+  <rect width="800" height="1000" fill="#e9dfd1"/>
+  <ellipse cx="420" cy="770" rx="310" ry="115" fill="#d6c4ae" opacity=".5"/>
+  <ellipse cx="400" cy="650" rx="260" ry="105" fill="#f7f1e8" stroke="#bcae9e" stroke-width="4"/>
+  <rect x="140" y="420" width="520" height="230" rx="38" fill="#f2eadf" stroke="#bcae9e" stroke-width="4"/>
+  <ellipse cx="400" cy="420" rx="260" ry="105" fill="#fffaf2" stroke="#bcae9e" stroke-width="4"/>
+  <path d="M225 410C310 352 480 470 570 396" fill="none" stroke="#dfd0bc" stroke-width="15" stroke-linecap="round"/>
+  <text x="400" y="500" text-anchor="middle" fill="#2a2b28" font-family="Georgia, serif" font-size="40" letter-spacing="10">SOOYAN</text>
+  <path d="M350 530h100" stroke="#aa7751" stroke-width="5"/>
+  <text x="400" y="575" text-anchor="middle" fill="#2a2b28" font-family="Arial, sans-serif" font-size="20" letter-spacing="3">TRIPLE LIPID</text>
+  <text x="400" y="607" text-anchor="middle" fill="#2a2b28" font-family="Arial, sans-serif" font-size="20" letter-spacing="3">PEPTIDE CREAM</text>
+  <text x="400" y="925" text-anchor="middle" fill="#615e58" font-family="Arial, sans-serif" font-size="17" letter-spacing="4">CONCEPT VISUAL</text>
+</svg>

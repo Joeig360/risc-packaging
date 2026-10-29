@@ -1,0 +1,6 @@
+# Local build output and installed dependencies are recreated by Vercel.
+.next
+node_modules
+
+# Private catalogue-maintenance source files must never be uploaded to a deployment.
+docs/product-source

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Peptide Lip Treatment concept visual</title>
+  <desc id="desc">Glossy rose premium lip treatment tube concept.</desc>
+  <rect width="800" height="1000" fill="#f1dfdc"/>
+  <circle cx="620" cy="225" r="205" fill="#f8ede9"/>
+  <path d="M120 790C230 650 460 690 680 845" fill="none" stroke="#bc8077" stroke-width="40" stroke-linecap="round" opacity=".8"/>
+  <rect x="252" y="275" width="296" height="450" rx="46" fill="#f6cbc7" stroke="#b97f77" stroke-width="4" transform="rotate(-8 400 500)"/>
+  <rect x="279" y="225" width="242" height="95" rx="22" fill="#d3a19b" transform="rotate(-8 400 500)"/>
+  <text x="400" y="438" text-anchor="middle" fill="#3d302f" font-family="Georgia, serif" font-size="40" letter-spacing="10">SOOYAN</text>
+  <path d="M352 468h96" stroke="#ad6f62" stroke-width="5"/>
+  <text x="400" y="534" text-anchor="middle" fill="#3d302f" font-family="Arial, sans-serif" font-size="23" letter-spacing="3">PEPTIDE LIP</text>
+  <text x="400" y="569" text-anchor="middle" fill="#3d302f" font-family="Arial, sans-serif" font-size="23" letter-spacing="3">TREATMENT</text>
+  <text x="400" y="925" text-anchor="middle" fill="#725a57" font-family="Arial, sans-serif" font-size="17" letter-spacing="4">CONCEPT VISUAL</text>
+</svg>

@@ -2,7 +2,7 @@ export const peptideSolution = {
   hero: {
     eyebrow: "PEPTIDE PACKAGING",
     title: "Peptide Packaging, Built as a System",
-    copy: "RISC coordinates containers, dispensing components, inserts, cartons and specialized suppliers around your packaging requirements.",
+    copy: "SOOYAN coordinates containers, dispensing components, inserts, cartons and specialized suppliers around your packaging requirements.",
     primaryCta: { label: "EXPLORE PACKAGING SYSTEMS", href: "#packaging-systems" },
     secondaryCta: { label: "START A PROJECT", href: "/start-a-project" },
     images: [
@@ -20,7 +20,7 @@ export const peptideSolution = {
   completeSystem: {
     eyebrow: "SYSTEM THINKING",
     title: "From Primary Packaging to Complete Kits",
-    copy: "RISC brings specialized packaging components into one considered project direction.",
+    copy: "SOOYAN brings specialized packaging components into one considered project direction.",
     routes: [
       { name: "Vial Route", items: ["Vial", "Closure", "Label", "Insert", "Carton"] },
       { name: "Serum Route", items: ["Bottle", "Dropper / Airless Pump", "Decoration", "Insert", "Carton"] },

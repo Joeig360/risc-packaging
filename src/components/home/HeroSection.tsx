@@ -1,5 +1,26 @@
 import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
-import { homeImages } from "@/content";
-export function HeroSection(){return <section className="relative min-h-[72svh] overflow-hidden bg-graphite text-[#fcfbf7] md:min-h-[calc(88svh-5rem)]"><Image src={homeImages.hero.src} alt={homeImages.hero.alt} fill priority sizes="100vw" className="object-cover object-[62%_center] opacity-70"/><div className="absolute inset-0 bg-gradient-to-r from-graphite via-graphite/80 to-transparent"/><div className="relative mx-auto flex min-h-[72svh] max-w-[var(--container-wide)] items-center px-[var(--page-gutter)] py-16 md:min-h-[calc(88svh-5rem)]"><div className="max-w-xl"><p className="text-xs tracking-[.15em]">RISC PACKAGING</p><h1 className="mt-5 font-display text-5xl leading-[.9] md:text-8xl">Complete Packaging Systems</h1><p className="mt-6 text-lg leading-7 text-[#d9d7ce]">RISC helps brands develop, source, coordinate and deliver complete packaging systems across skincare, peptides and professional packaging.</p><div className="mt-8 flex flex-wrap gap-3"><Button href="/start-a-project">START A PROJECT</Button><Link href="#explore" className="border border-[#d9d7ce] px-5 py-3 text-xs font-semibold tracking-[.1em]">EXPLORE PACKAGING</Link></div></div></div></section>}
+import { homeImages } from "@/content/homepage";
+
+export function HeroSection() {
+  const image = homeImages.heroSlides[2];
+
+  return (
+    <section className="bg-ivory" aria-labelledby="home-heading">
+      <div className="mx-auto grid max-w-[var(--container-wide)] lg:grid-cols-2">
+        <div className="flex flex-col justify-center px-[var(--page-gutter)] py-8 md:py-14 lg:py-16">
+          <p className="text-xs font-semibold tracking-[.15em] text-slate">SOOYAN / FOR BEAUTY BRANDS</p>
+          <h1 id="home-heading" className="mt-4 max-w-xl font-display text-4xl leading-[1.05] md:text-6xl">Skincare, private label & custom packaging.</h1>
+          <p className="mt-5 max-w-md leading-7 text-slate">Explore skincare and beauty products. Bring product development, brand presentation and packaging into one coordinated project.</p>
+          <div className="mt-6 grid gap-3 sm:flex sm:flex-wrap" aria-label="Explore SOOYAN">
+            <Button href="/products">EXPLORE PRODUCTS</Button>
+            <Button href="/packaging-systems" variant="quiet">EXPLORE PACKAGING</Button>
+          </div>
+        </div>
+        <div className="relative aspect-[3/2] lg:aspect-auto lg:min-h-[470px]">
+          <Image src={image.src} alt={image.alt} fill priority sizes="(max-width:1023px) 100vw, 50vw" className="object-cover" />
+        </div>
+      </div>
+    </section>
+  );
+}

@@ -1,1 +1,15 @@
-import { startWithWhatYouHave } from "@/content"; import { Button } from "@/components/ui/button"; export function StartWithWhatYouHaveSection(){return <section className="bg-graphite py-20 text-[#fcfbf7] md:py-24"><div className="mx-auto max-w-[var(--container-content)] px-[var(--page-gutter)] text-center"><p className="text-xs tracking-[.14em]">START WITH WHAT YOU HAVE</p><h2 className="mt-5 font-display text-4xl md:text-5xl">You don&apos;t need a finished packaging specification to begin.</h2><div className="mt-7 flex flex-wrap justify-center gap-x-5 gap-y-3 text-sm text-[#d9d7ce]">{startWithWhatYouHave.map(x=><span key={x}>{x}</span>)}</div><Button href="/start-a-project" className="mt-8">START A PROJECT</Button></div></section>}
+import { Button } from "@/components/ui/button";
+import { inquiryHref } from "@/lib/inquiry-links";
+
+export function StartWithWhatYouHaveSection() {
+  return (
+    <section className="bg-graphite py-14 text-paper md:py-20">
+      <div className="mx-auto max-w-[var(--container-content)] px-[var(--page-gutter)] text-center">
+        <p className="text-xs tracking-[.14em] text-silver">LET’S START A CONVERSATION</p>
+        <h2 className="mx-auto mt-4 max-w-2xl font-display text-3xl leading-[1.1] md:text-5xl">What’s next for your brand?</h2>
+        <p className="mx-auto mt-5 max-w-lg leading-7 text-silver">Share a product idea, a packaging reference or your project requirements. Start with what you have.</p>
+        <Button href={inquiryHref({ inquiryType: "start-project", sourceUrl: "/" })} className="mt-7 border border-silver hover:border-paper">START A PROJECT</Button>
+      </div>
+    </section>
+  );
+}
