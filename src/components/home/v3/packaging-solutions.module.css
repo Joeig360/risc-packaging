@@ -1,0 +1,50 @@
+.section { background: #eee7dc; color: #2c2521; padding: 64px var(--page-gutter) 58px; }
+.inner { max-width: 1324px; margin-inline: auto; }
+.heading { display: grid; grid-template-columns: 1.4fr 1fr; align-items: end; gap: 70px; margin-bottom: 38px; }
+.eyebrow { margin: 0 0 19px; font-size: 10px; line-height: 1.5; text-transform: uppercase; letter-spacing: .16em; color: #715b45; }
+.title { margin: 0; font: 400 clamp(34px, 3.5vw, 52px)/1.08 var(--suvela-font-display); letter-spacing: -.035em; }
+.intro { max-width: 430px; }
+.intro > p { margin: 0; font-size: 15px; line-height: 1.7; color: #665c50; }
+.link { display: inline-flex; align-items: center; justify-content: space-between; gap: 28px; min-height: 46px; margin-top: 17px; border-bottom: 1px solid #a88c6d; font-size: 13px; }
+.link:hover { color: #745332; border-color: currentColor; }
+.link:focus-visible { outline: 2px solid #745332; outline-offset: 5px; }
+.editorial { display: grid; grid-template-columns: 1.65fr 1fr; align-items: center; gap: 44px; }
+.mainFigure, .detailFigure { margin: 0; min-width: 0; }
+.mainImage { position: relative; aspect-ratio: 3 / 2; }
+.image { object-fit: contain; }
+.note { position: absolute; bottom: 10px; left: 12px; padding: 3px 7px; background: rgb(250 246 239 / 90%); color: #574a3b; font-size: 9px; line-height: 1.4; }
+.mainCaption { display: flex; gap: 20px; padding-top: 21px; }
+.number { display: block; font-size: 10px; line-height: 1.7; letter-spacing: .06em; color: #8a7050; }
+.mainCaption h3, .detailFigure h3 { margin: 0; font: 400 25px/1.2 var(--suvela-font-display); letter-spacing: -.02em; }
+.mainCaption p, .detailFigure p { margin: 9px 0 0; font-size: 13px; line-height: 1.65; color: #665c50; }
+.details { display: flex; flex-direction: column; gap: 31px; }
+.detailFigure { display: grid; grid-template-columns: 1.1fr 1fr; align-items: center; gap: 23px; padding-bottom: 31px; border-bottom: 1px solid #cfc0ac; }
+.detailFigure:last-child { padding-bottom: 0; border-bottom: 0; }
+.detailImage { position: relative; aspect-ratio: 3 / 2; }
+.detailFigure .number { margin-bottom: 11px; }
+.detailFigure h3 { font-size: 23px; }
+.detailFigure .note { bottom: 6px; left: 6px; font-size: 8px; padding: 2px 5px; }
+@media (min-width: 768px) and (max-width: 1100px) {
+  .heading { gap: 35px; }
+  .editorial { grid-template-columns: 1.25fr 1fr; gap: 28px; }
+  .detailFigure { gap: 15px; }
+  .detailFigure h3 { font-size: 20px; }
+  .detailFigure p { font-size: 12px; }
+}
+@media (max-width: 767px) {
+  .section { padding: 34px 24px 32px; }
+  .heading { display: block; margin-bottom: 24px; }
+  .eyebrow { font-size: 9px; margin-bottom: 13px; }
+  .title { font-size: clamp(31px, 8.9vw, 44px); line-height: 1.08; }
+  .intro { margin-top: 17px; }
+  .intro > p { font-size: 13px; line-height: 1.65; }
+  .link { margin-top: 12px; font-size: 12px; }
+  .editorial { display: block; }
+  .mainCaption { gap: 13px; padding-top: 15px; }
+  .mainCaption h3 { font-size: 22px; }
+  .mainCaption p, .detailFigure p { font-size: 12px; margin-top: 6px; }
+  .details { margin-top: 26px; padding-top: 23px; border-top: 1px solid #cfc0ac; gap: 20px; }
+  .detailFigure { grid-template-columns: 1fr 1.25fr; gap: 18px; padding-bottom: 20px; }
+  .detailFigure h3 { font-size: 21px; }
+  .detailFigure .number { margin-bottom: 6px; }
+}

@@ -1,0 +1,68 @@
+.hero {
+  position: relative;
+  isolation: isolate;
+  min-height: min(820px, calc(100svh - 81px));
+  background: #f5e9e2;
+  color: #27221f;
+  overflow: clip;
+}
+.visual { position: absolute; inset: 0; margin: 0; z-index: -1; }
+.image { object-fit: cover; object-position: center; animation: settle 1.3s ease-out both; }
+.imageNote { position: absolute; bottom: 16px; right: 25px; font-size: 10px; line-height: 1.5; color: #54483f; background: rgb(255 248 241 / 85%); padding: 4px 8px; }
+.content { display: flex; flex-direction: column; justify-content: center; width: 44%; min-height: inherit; padding: 60px 0 65px clamp(32px, 5.6vw, 100px); animation: arrive .8s ease-out both; }
+.eyebrow { display: flex; align-items: center; gap: 22px; margin: 0 0 29px; font-size: 12px; line-height: 1.6; font-weight: 500; letter-spacing: .16em; text-transform: uppercase; }
+.eyebrow span { width: 43px; height: 1px; background: #b58e77; }
+.title { margin: 0; font-family: var(--suvela-font-display); font-weight: 400; font-size: clamp(54px, 5.55vw, 88px); line-height: 1.04; letter-spacing: -.048em; }
+.description { max-width: 405px; margin: 25px 0 0; font-family: var(--suvela-font-display); font-size: clamp(19px, 1.65vw, 25px); line-height: 1.45; letter-spacing: -.018em; }
+.actions { display: flex; flex-wrap: wrap; gap: 15px; margin-top: 36px; }
+.primary, .secondary { display: inline-flex; align-items: center; justify-content: center; min-height: 50px; padding: 0 24px; border: 1px solid #827064; border-radius: 2px; font-size: 14px; transition: background .2s, color .2s, border-color .2s; }
+.primary { gap: 19px; background: #2b2521; color: #fffaf5; border-color: #2b2521; }
+.secondary { background: rgb(255 249 243 / 35%); }
+.primary:hover { background: #534235; border-color: #534235; }
+.secondary:hover { background: #fff8f0; border-color: #49392e; }
+.primary span { transition: transform .2s; }
+.primary:hover span { transform: translateX(4px); }
+.primary:focus-visible, .secondary:focus-visible { outline: 2px solid #664d38; outline-offset: 5px; }
+.services { display: flex; align-items: end; gap: 0; list-style: none; padding: 0; margin: 58px 0 0; max-width: 420px; }
+.services li { position: relative; display: flex; flex: 1; flex-direction: column; align-items: center; text-align: center; gap: 12px; padding: 0 17px; font-family: var(--suvela-font-display); font-size: 17px; line-height: 1.25; }
+.services li:first-child { padding-left: 0; }
+.services li + li::before { content: ""; position: absolute; left: 0; bottom: 5px; height: 31px; width: 1px; background: #c5a991; }
+.services svg { width: 29px; height: 29px; }
+@keyframes arrive { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@keyframes settle { from { opacity: .65; transform: scale(1.018); } to { opacity: 1; transform: scale(1); } }
+@media (min-width: 768px) and (max-width: 1150px) {
+  .content { width: 47%; padding-left: 32px; }
+  .eyebrow { font-size: 10px; gap: 12px; }
+  .eyebrow span { width: 24px; }
+  .title { font-size: clamp(49px, 5.8vw, 66px); }
+  .description { max-width: 330px; font-size: 20px; }
+  .actions { gap: 10px; }
+  .primary, .secondary { padding-inline: 14px; font-size: 12px; }
+  .services { margin-top: 40px; }
+}
+@media (max-width: 767px) {
+  .hero { display: flex; flex-direction: column; min-height: 0; background: #f8eee7; }
+  .content { width: 100%; min-height: 0; padding: 29px 24px 0; }
+  .eyebrow { font-size: 9px; letter-spacing: .14em; gap: 14px; margin-bottom: 16px; }
+  .eyebrow span { width: 30px; }
+  .title { font-size: clamp(42px, 12.3vw, 64px); line-height: 1.02; letter-spacing: -.045em; }
+  .description { max-width: 350px; margin-top: 16px; font-size: 18px; line-height: 1.4; }
+  .actions { flex-wrap: nowrap; gap: 10px; margin-top: 21px; }
+  .primary, .secondary { min-height: 46px; padding-inline: 14px; font-size: 12px; white-space: nowrap; }
+  .primary { gap: 10px; }
+  .services { margin-top: 24px; max-width: 360px; }
+  .services li { gap: 6px; font-size: 13px; padding-inline: 10px; }
+  .services svg { width: 23px; height: 23px; }
+  .services li + li::before { height: 25px; bottom: 3px; }
+  .visual { position: relative; inset: auto; z-index: 0; order: 2; height: clamp(270px, 34svh, 340px); margin-top: 8px; overflow: hidden; }
+  .image { object-position: right center; }
+  .imageNote { bottom: 8px; right: 10px; font-size: 8px; padding: 3px 5px; }
+}
+@media (max-width: 359px) {
+  .content { padding-inline: 18px; }
+  .primary, .secondary { padding-inline: 10px; font-size: 11px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .content, .image { animation: none; }
+  .primary, .secondary, .primary span { transition: none; }
+}

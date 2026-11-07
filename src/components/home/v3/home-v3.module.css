@@ -1,0 +1,19 @@
+.home { background: #faf5f1; }
+.home .products {
+  background: linear-gradient(180deg, #f1e4db 0, #faf5f1 64px);
+  padding-top: 54px;
+  padding-bottom: 36px;
+}
+/* Avoid a second entrance sequence below the already animated hero. */
+.products li, .products > div > div:first-child { animation: none; }
+.products h2 { letter-spacing: -.035em; }
+.products h3 { min-height: 80px; }
+@media (max-width: 767px) {
+  .home .products {
+    background: linear-gradient(180deg, #f1e4db 0, #faf5f1 40px);
+    padding: 27px 24px 26px;
+  }
+  .products .productGrid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 23px 14px; }
+  .productGrid > li:nth-child(n + 5) { display: none; }
+  .products h3 { min-height: 64px; }
+}

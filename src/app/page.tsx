@@ -1,7 +1,4 @@
-import { HeroSection } from "@/components/home/HeroSection";
-import { CompleteSystemsSection } from "@/components/home/CompleteSystemsSection";
-import { StartWithWhatYouHaveSection } from "@/components/home/StartWithWhatYouHaveSection";
-import { FeaturedSkincareInnovationsSection } from "@/components/home/SkincareDiscoverySections";
+import { HomepageV3 } from "@/components/home/v3/HomepageV3";
 import { createMetadata } from "@/lib/seo";
 
 export const metadata = createMetadata({
@@ -9,12 +6,5 @@ export const metadata = createMetadata({
 });
 
 export default function Home() {
-  return (
-    <>
-      <HeroSection />
-      <FeaturedSkincareInnovationsSection />
-      <CompleteSystemsSection />
-      <StartWithWhatYouHaveSection />
-    </>
-  );
+  return <HomepageV3 />;
 }
