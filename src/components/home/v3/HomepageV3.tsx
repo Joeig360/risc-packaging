@@ -17,9 +17,9 @@ const selection = [
   { slug: "ghk-cu-ahk-cu-scalp-care-spray", width: "94%" },
 ];
 
-export function HomepageV3() {
+export function HomepageV3({ heroImage }: { heroImage: string | null }) {
   return <div className={styles.home}>
-    <HeroV3 />
+    <HeroV3 image={heroImage} />
     <section className={`${products.section} ${styles.products}`} aria-labelledby="home-v3-products-title" data-home-v3-products>
       <div className={products.inner}>
         <div className={products.heading}>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import { HeroImage } from "./HeroImage";
 import Link from "next/link";
 import styles from "./hero-v3.module.css";
 
@@ -8,12 +8,10 @@ function ServiceIcon({ type }: { type: "development" | "label" | "packaging" }) 
   </svg>;
 }
 
-export function HeroV3() {
+export function HeroV3({ image }: { image: string | null }) {
   return <section className={styles.hero} aria-labelledby="hero-v3-title">
     <figure className={styles.visual}>
-      <Image src="/images/home/sooyan-hero-v3-concept.webp"
-        alt="AI packaging concept: SOOYAN serum, cream and pump bottles with a blush and ivory carton, champagne finishes and pale stone staging"
-        fill preload unoptimized sizes="100vw" className={styles.image} />
+      <HeroImage src={image} />
       <figcaption className={styles.imageNote}>AI concept · packaging subject to confirmation</figcaption>
     </figure>
     <div className={styles.content}>
