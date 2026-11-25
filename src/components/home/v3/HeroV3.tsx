@@ -16,7 +16,7 @@ export function HeroV3({ hero }: { hero: HeroContent }) {
     </figure>
     <div className={styles.content}>
       <p className={styles.eyebrow}>Beauty × Packaging Solutions <span aria-hidden="true" /></p>
-      <h1 id="hero-v3-title" className={styles.title}>{hero.title ?? <>From Product<br /> to Brand.</>}</h1>
+      <h1 id="hero-v3-title" className={styles.title}>{!hero.title || hero.title === "From Product to Brand." ? <>From Product<br /> to Brand.</> : hero.title}</h1>
       <p className={styles.description}>{hero.subtitle ?? "Skincare development, private label, and custom packaging for beauty brands."}</p>
       <div className={styles.actions}>
         <Link href={hero.primaryCta.href ?? "/start-a-project"} className={styles.primary}>{hero.primaryCta.label ?? "Discuss a Project"} <span aria-hidden="true">→</span></Link>
