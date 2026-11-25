@@ -20,6 +20,7 @@ export function getSiteUrl(): URL | undefined {
 }
 
 export function isSiteIndexable(): boolean {
+  if (process.env.CONTEXT === "deploy-preview") return false;
   const environment = process.env.VERCEL_ENV;
   return Boolean(getSiteUrl()) && (environment ? environment === "production" : process.env.NODE_ENV === "production");
 }
