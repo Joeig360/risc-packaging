@@ -1,4 +1,5 @@
 import { HeroImage } from "./HeroImage";
+import type { HeroContent } from "@/lib/sanity-home-hero";
 import Link from "next/link";
 import styles from "./hero-v3.module.css";
 
@@ -8,19 +9,18 @@ function ServiceIcon({ type }: { type: "development" | "label" | "packaging" }) 
   </svg>;
 }
 
-export function HeroV3({ image }: { image: string | null }) {
+export function HeroV3({ hero }: { hero: HeroContent }) {
   return <section className={styles.hero} aria-labelledby="hero-v3-title">
     <figure className={styles.visual}>
-      <HeroImage src={image} />
-      <figcaption className={styles.imageNote}>AI concept · packaging subject to confirmation</figcaption>
+      <HeroImage desktop={hero.image} mobile={hero.mobileImage} />
     </figure>
     <div className={styles.content}>
       <p className={styles.eyebrow}>Beauty × Packaging Solutions <span aria-hidden="true" /></p>
-      <h1 id="hero-v3-title" className={styles.title}>From Product<br /> to Brand.</h1>
-      <p className={styles.description}>Skincare development, private label, and custom packaging for beauty brands.</p>
+      <h1 id="hero-v3-title" className={styles.title}>{hero.title ?? <>From Product<br /> to Brand.</>}</h1>
+      <p className={styles.description}>{hero.subtitle ?? "Skincare development, private label, and custom packaging for beauty brands."}</p>
       <div className={styles.actions}>
-        <Link href="/start-a-project" className={styles.primary}>Discuss a Project <span aria-hidden="true">→</span></Link>
-        <Link href="/products" className={styles.secondary}>Explore Products</Link>
+        <Link href={hero.primaryCta.href ?? "/start-a-project"} className={styles.primary}>{hero.primaryCta.label ?? "Discuss a Project"} <span aria-hidden="true">→</span></Link>
+        <Link href={hero.secondaryCta.href ?? "/products"} className={styles.secondary}>{hero.secondaryCta.label ?? "Explore Products"}</Link>
       </div>
       <ul className={styles.services} aria-label="Our services">
         <li><ServiceIcon type="development" /><span>Product<br />Development</span></li>
