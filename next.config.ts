@@ -1,6 +1,9 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  env: {
+    SOOYAN_DEPLOY_PREVIEW: process.env.CONTEXT === "deploy-preview" ? "true" : "false",
+  },
   async headers() {
     return process.env.CONTEXT === "deploy-preview"
       ? [{ source: "/:path*", headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow" }] }]
