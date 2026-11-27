@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { b2bProducts } from "@/content/catalog-products";
 import { HeroV3 } from "./HeroV3";
+import type { HeroContent } from "@/lib/sanity-home-hero";
 import products from "./featured-products-v2.module.css";
 import styles from "./home-v3.module.css";
 import packaging from "./packaging-solutions.module.css";
@@ -17,9 +18,9 @@ const selection = [
   { slug: "ghk-cu-ahk-cu-scalp-care-spray", width: "94%" },
 ];
 
-export function HomepageV3() {
+export function HomepageV3({ hero }: { hero: HeroContent }) {
   return <div className={styles.home}>
-    <HeroV3 />
+    <HeroV3 hero={hero} />
     <section className={`${products.section} ${styles.products}`} aria-labelledby="home-v3-products-title" data-home-v3-products>
       <div className={products.inner}>
         <div className={products.heading}>
